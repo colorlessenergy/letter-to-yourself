@@ -1,9 +1,8 @@
-var dashes = 19;
+var dashes = 50;
 var pipes = 9;
 var letter = document.getElementById("letter");
 var dashesA = [];
 var pipesA = [];
-var pipesB = [];
 function createDashes () {
   for (var i = 0; i < dashes; i++) {
     if (i === 0) {
@@ -20,11 +19,21 @@ function createPipes () {
   for (var i = 0; i < pipes; i++) {
     pipesA.push("\n")
     pipesA.push("|");
+
+    for (var l = 0; l < dashes-5; l++) {
+      pipesA.push("\u00A0");
+
+    }
+    switch (i < pipes) {
+      case i === 1:
+      pipesA.push("hello")
+        break;
+      default:
+
+    }
+    pipesA.push("|");
   }
-  for (var j = 0; j < pipes; j++) {
-    pipesB.push("|");
-  }
-  letter.innerHTML = dashesA.join("")+ pipesB.join("")  + pipesA.join("") + "\n" + dashesA.join("") 
+  letter.innerHTML = dashesA.join("") + pipesA.join("") + "\n" + dashesA.join("")
 }
 
 
