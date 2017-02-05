@@ -1,5 +1,6 @@
 var dashes = 50;
-var pipes = 9;
+var pipes = 10;
+var spacesFromRight = 20;
 var letter = document.getElementById("letter");
 var dashesA = [];
 var pipesA = [];
@@ -20,16 +21,51 @@ function createPipes () {
     pipesA.push("\n")
     pipesA.push("|");
 
-    for (var l = 0; l < dashes-5; l++) {
+    for (var l = 0; l < dashes-spacesFromRight; l++) {
       pipesA.push("\u00A0");
 
     }
     switch (i < pipes) {
+      case i === 0:
+      for (var k = 0; k < spacesFromRight - 4; k++) {
+        pipesA.push("\u00A0")
+      }
+      pipesA.push("####");
+      break;
       case i === 1:
-      pipesA.push("hello")
-        break;
+      for (var k = 0; k < spacesFromRight - 4; k++) {
+        pipesA.push("\u00A0")
+      }
+      pipesA.push("####")
+      break;
+      case i === 2:
+      for (var k = 0; k < spacesFromRight - 4; k++) {
+        pipesA.push("\u00A0")
+      }
+      pipesA.push("####")
+      break;
+      case i === 6:
+      pipesA.push("Brian Munoz");
+      for (var h = 0; h < 9; h++) {
+        pipesA.push("\u00A0");
+      }
+      break;
+      case i === 7:
+      pipesA.push("is a web developer");
+      pipesA.push("\u00A0");
+      pipesA.push("\u00A0");
+      break;
+      case i === 8:
+      pipesA.push("Long Beach Ca");
+      for (var h = 0; h < 7; h++) {
+        pipesA.push("\u00A0");
+      }
+      break;
       default:
-
+      for (var j = 0; j < spacesFromRight; j++) {
+        pipesA.push("\u00A0");
+      }
+      break;
     }
     pipesA.push("|");
   }
