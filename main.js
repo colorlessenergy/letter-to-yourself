@@ -56,11 +56,7 @@ function createPipes () {
       pipesA.push("\u00A0");
       break;
       case i === 8:
-      pipesA.push("Long Beach Ca");
-      for (var h = 0; h < 7; h++) {
-        pipesA.push("\u00A0");
-      }
-      
+      pipesA.push("Long Beach, CA 90802");
       break;
       default:
       for (var j = 0; j < spacesFromRight; j++) {
