@@ -60,6 +60,7 @@ function createPipes () {
       for (var h = 0; h < 7; h++) {
         pipesA.push("\u00A0");
       }
+      
       break;
       default:
       for (var j = 0; j < spacesFromRight; j++) {
